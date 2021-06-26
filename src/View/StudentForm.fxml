@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="studentFormContext" prefHeight="465.0" prefWidth="701.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.StudentFormController">
+   <children>
+      <JFXButton buttonType="RAISED" layoutX="15.0" layoutY="19.0" onAction="#backToHomeOnAction" style="-fx-background-color: #34495e;" text="Home" textFill="#fcf9f9">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="98.0" layoutY="14.0" text="Student Form" textFill="#800c0c">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="589.0" layoutY="19.0" onAction="#newStudentOnAction" style="-fx-background-color: #2980b9;" text="+ New Student" textFill="#fffefe">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Separator layoutX="259.0" layoutY="31.0" prefHeight="2.0" prefWidth="302.0" />
+      <JFXTextField fx:id="txtId" layoutX="14.0" layoutY="63.0" onAction="#moveToName" prefHeight="25.0" prefWidth="117.0" promptText="Id" />
+      <JFXTextField fx:id="txtAddress" layoutX="14.0" layoutY="104.0" prefHeight="25.0" prefWidth="554.0" promptText="Address" />
+      <JFXTextField fx:id="txtName" layoutX="157.0" layoutY="63.0" onAction="#moveToContact" prefHeight="25.0" prefWidth="340.0" promptText="Name" />
+      <JFXTextField fx:id="txtContact" layoutX="522.0" layoutY="63.0" onAction="#moveToAddress" promptText="Contact" />
+      <JFXButton fx:id="btnSaveAndUpdate" buttonType="RAISED" layoutX="596.0" layoutY="104.0" onAction="#saveUpdateOnAction" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: #34495e;" text="Save" textFill="#fcfafa">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblStudent" layoutX="14.0" layoutY="203.0" prefHeight="249.0" prefWidth="671.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="60.0" text="Id " />
+          <TableColumn fx:id="colName" prefWidth="127.0" text="Name" />
+            <TableColumn fx:id="colContact" prefWidth="98.0" text="Contact" />
+            <TableColumn fx:id="colAddress" prefWidth="274.0" text="Address" />
+            <TableColumn fx:id="colOperate" prefWidth="111.0" text="Operate" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtSearch" layoutX="14.0" layoutY="150.0" prefHeight="25.0" prefWidth="554.0" promptText="Search" />
+   </children>
+</AnchorPane>
